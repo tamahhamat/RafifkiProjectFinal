@@ -1,3 +1,5 @@
+/* C:\Users\newma\school_projects\RafifkiProjectFinal\Frontend\public\css\style.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: hsl(0, 30%, 83%);
 }
 
 h1 {
