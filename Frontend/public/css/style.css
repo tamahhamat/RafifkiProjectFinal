@@ -1,16 +1,109 @@
-/* C:\Users\newma\school_projects\RafifkiProjectFinal\Frontend\public\css\style.css */
+/* C:\Users\newma\school_projects\RafikiProjectFinal\Frontend\public\css\style.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Monaco', monospace;
     margin: 0;
     padding: 0;
+    background-color: #dedcda;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: hsl(0, 30%, 83%);
+    overflow: hidden; /*  */
 }
 
-h1 {
-    color: #333;
+.header {
+    width: 100vw;
+    height: calc(4vh + 19px); /* based on viewport height plus pixels for more control */
+    background-color: white;
+    padding: 0.5rem;
+    box-shadow: 0 1px 1px rgba(157, 154, 154, 0.1);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; /* padding / border in the element's total width / height */
+    position: relative; /* absolute positioning of buttons */
+    overflow: hidden;
+}
+
+.header-logo {
+    height: 45px; /* Size */
+    object-fit: contain; /* image scales while maintaining its ratio */
+}
+
+.header-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /*  space between buttons */
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-button {
+    background-color: #1ba7af; 
+    color: white;
+    border: none;
+    border-radius: 50px; /* Oval shape */
+    padding: 0.4rem 0.8rem; 
+    font-size: 0.5rem; 
+    font-weight: bold; 
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin: 0; /* Removed margin for buttons -needed???? */
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.header-button:hover {
+    background-color: #1ba7af; 
+    /* transform: scale(1.05); */
+}
+
+.content {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        padding: 0.5rem;
+        height: calc(4vh + 20px); /* height for smaller screens */
+    }
+
+    .header-logo {
+        height: 30px; /* height for smaller screens */
+    }
+
+    .header-button {
+        font-size: 0.45rem; /* font size for smaller screens */
+        padding: 0.35rem 0.7rem; /* Increased padding for smaller screens???? */
+    }
+
+    .header-buttons {
+        gap: 0.4rem; /* Increased space between buttons for smaller screens */
+    }
+
+   
+
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        height: 20px; /* more adjust height for very small screens */
+    }
+
+    .header-button {
+        font-size: 0.4rem; /* more reduced font size */
+        padding: 0.3rem 0.6rem; /* more increased padding */
+    }
+
+    .header-buttons {
+        gap: 0.3rem; /* more space between buttons for very small screens */
+    }
 }
