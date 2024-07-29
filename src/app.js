@@ -26,7 +26,7 @@ app.use('/', routes);
 
 // Catch-all handler to serve index.html for any other routes
 app.get('*', (req, res) => {
-    const indexPath = path.join(__dirname, '../Frontend/index.html');
+    const indexPath = path.join(__dirname, ' ./Frontend/index.html');
     console.log('Serving index.html from:', indexPath);
     res.sendFile(indexPath, (err) => {
         if (err) {
