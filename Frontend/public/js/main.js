@@ -5,14 +5,63 @@ const { useState } = React;
 const ReactDOM = window.ReactDOM;
 const React = window.React;
 
+
+
 function UNGoalsSection() {
+  const goals = [
+    { 
+      goal: 'Zero Hunger', 
+      dataPoints: ['School Kitchens Built', 'Lunches Served', 'Data 1.3'], 
+      goalClass: 'un-goal-zero-hunger',
+      dataPointClasses: ['data-point-zero-hunger-1', 'data-point-zero-hunger-2', 'data-point-zero-hunger-3']
+    },
+    { 
+      goal: 'Good Health and Well-Being', 
+      dataPoints: ['Health Clinics', 'Medication Dispensed', 'Pregnant Mothers Helped'], 
+      goalClass: 'un-goal-good-health',
+      dataPointClasses: ['data-point-good-health-1', 'data-point-good-health-2', 'data-point-good-health-3']
+    },
+    { 
+      goal: 'Quality Education', 
+      dataPoints: ['Schools Renovated', 'Desks and Other Supplies', 'Data 3.3'], 
+      goalClass: 'un-goal-quality-education',
+      dataPointClasses: ['data-point-quality-education-1', 'data-point-quality-education-2', 'data-point-quality-education-3']
+    },
+    { 
+      goal: 'Clean Water and Sanitation', 
+      dataPoints: ['km/miles of water piping', 'Sanitation Tool', 'Data 4.3'], 
+      goalClass: 'un-goal-clean-water',
+      dataPointClasses: ['data-point-clean-water-1', 'data-point-clean-water-2', 'data-point-clean-water-3']
+    },
+  ];
+
   return (
     <section className="un-goals">
-      <h2>UN Goals</h2>
-      <p>Details about how the organization follows the UN goals.</p>
+      <div className="un-goals-header">
+        <h2>United Nations Sustainable Development Goals</h2>
+        <p>Rafiki Village Project uses the UN Sustainable Development Goals to inspire our projects and improve the communities we work with. 
+          The goals of No Poverty, Zero Hunger, Good Health and Well-Being, Quality Education, and Clean Water and Sanitation are what we hope 
+          to achieve through our work. To find out more about the United Nations 17 Sustainable Development Goals please go to <br></br>
+          <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer">sdgs.un.org/goals</a>.</p>
+      </div>
+      <div className="un-goals-grid">
+        {goals.map((item, index) => (
+          <div key={index} className="un-goal-item">
+            <div className={`un-goal ${item.goalClass}`}>{item.goal}</div>
+            <div className="data-points">
+              {item.dataPoints.map((data, idx) => (
+                <div key={idx} className={`data-point ${item.dataPointClasses[idx]}`}>{data}</div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
+
+
+
 
 
 
