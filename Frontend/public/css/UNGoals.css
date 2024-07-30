@@ -1,2 +1,183 @@
-/* C:\Users\newma\school_projects\RafifkiProjectFinal\Frontend\public\css\UNGoals.css
+/* C:\Users\newma\school_projects\RafikiProjectFinal\Frontend\public\css\UNGoals.css */
 
+/* General Styles */
+.un-goals {
+    padding: 1rem;
+    background-color: #f4f4f4;
+    margin: -.5rem 0 1rem;
+    border-radius: 8px;
+}
+
+.un-goals-header {
+    padding-top: 0.1rem; 
+}
+
+.un-goals-header h2 {
+    font-size: 0.9rem; 
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.un-goals-header p {
+    font-size: 0.6rem; 
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding-left: 3rem; 
+    padding-right: 3rem;
+}
+
+.un-goals-header a {
+    color: #1ba7af;
+    text-decoration: none;
+}
+
+.un-goals-header a:hover {
+    text-decoration: underline;
+}
+
+.un-goals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    gap: 1rem; /* Gap between grid items */
+}
+
+.un-goal-item {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.un-goal {
+    width: 80px;
+    height: 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    letter-spacing: -0.04em;
+    word-spacing: -0.3em;
+}
+
+/*  Colors for Each Goal */
+.un-goal-zero-hunger {
+    background-color: #e74c3c;  
+}
+
+.un-goal-good-health {
+    background-color: #3ba654;  
+}
+
+.un-goal-quality-education {
+    background-color: #f39c12;  
+}
+
+.un-goal-clean-water {
+    background-color: #3498db; 
+}
+
+/* Data Points Colors */
+.data-points {
+    display: flex;
+    gap: 0.5rem;  
+}
+
+.data-point {
+    width: 70px;
+    height: 70px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.5rem;
+    font-weight: bold;
+    letter-spacing: -0.04em;
+}
+
+/* Colors for Data Points   */
+.data-point-zero-hunger-1 {
+    background-color: #f86c53;  
+}
+
+.data-point-zero-hunger-2 {
+    background-color: #f45d33;  
+}
+
+.data-point-zero-hunger-3 {
+    background-color: #e63f0c; /* Dark Red */
+}
+
+.data-point-good-health-1 {
+    background-color: #81c784;  
+}
+
+.data-point-good-health-2 {
+    background-color: #388e3c;  
+}
+
+.data-point-good-health-3 {
+    background-color: #2c6b2f; 
+}
+
+.data-point-quality-education-1 {
+    background-color: #ffb74d;  
+}
+
+.data-point-quality-education-2 {
+    background-color: #f29334;  
+}
+
+.data-point-quality-education-3 {
+    background-color: #f57c00;  
+}
+
+.data-point-clean-water-1 {
+    background-color: #64b5f6;  
+}
+
+.data-point-clean-water-2 {
+    background-color: #1e88e5;  
+}
+
+.data-point-clean-water-3 {
+    background-color: #1976d2;  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .un-goals-header h2 {
+        font-size: 1.1rem; /*   medium screens */
+    }
+
+    .un-goals-header p {
+        font-size: 0.7rem; /*   medium screens */
+    }
+
+    .un-goals-grid {
+        grid-template-columns: 1fr; /*  smaller screens */
+    }
+
+    .data-points {
+        flex-wrap: wrap; /* smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .un-goals-header h2 {
+        font-size: 1rem; /*  very small screens */
+    }
+
+    .un-goals-header p {
+        font-size: 0.65rem; /* very small screens */
+    }
+}
