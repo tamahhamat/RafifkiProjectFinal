@@ -1,0 +1,15 @@
+responsiveness of the page, buttons get closer then the logo should get smaller to allow buttons, then logo goes away, then logo comes back and hamburger is available
+
+button hover color/text color
+
+link buttons to website
+
+eventually push updates from DB - long term
+
+Get fonts and color scheme from weebly
+
+get rid of scroll bar at bottom
+
+future idea, clicking on data points can lead to a closer look at the data
+
+header should be fixed position - always visible
