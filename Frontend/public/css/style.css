@@ -8,32 +8,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    overflow: hidden; /*  */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    overflow: auto; /* Allow scrolling */
 }
 
 .header {
     width: 100vw;
-    height: calc(4vh + 19px); /* based on viewport height plus pixels for more control */
+    height: calc(4vh + 19px); /* Height based on viewport height plus additional pixels for precise control */
     background-color: white;
     padding: 0.5rem;
     box-shadow: 0 1px 1px rgba(157, 154, 154, 0.1);
     display: flex;
     align-items: center;
-    box-sizing: border-box; /* padding / border in the element's total width / height */
-    position: relative; /* absolute positioning of buttons */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    position: relative; /* For absolute positioning of buttons */
     overflow: hidden;
 }
 
 .header-logo {
-    height: 45px; /* Size */
-    object-fit: contain; /* image scales while maintaining its ratio */
+    height: 35px; /* Size of the logo */
+    object-fit: contain; /* Ensures the image scales while maintaining its aspect ratio */
 }
 
 .header-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem; /*  space between buttons */
+    gap: 0.5rem; /* Increased space between buttons */
     position: absolute;
     right: 1rem;
     top: 50%;
@@ -41,69 +41,82 @@ body {
 }
 
 .header-button {
-    background-color: #1ba7af; 
+    background-color: #1ba7af; /* Blue background */
     color: white;
     border: none;
     border-radius: 50px; /* Oval shape */
-    padding: 0.4rem 0.8rem; 
-    font-size: 0.5rem; 
-    font-weight: bold; 
+    padding: 0.4rem 0.8rem; /* Increased padding */
+    font-size: 0.45rem; /* Smaller font size */
+    font-weight: bold; /* Make font bold */
     cursor: pointer;
     text-align: center;
     display: inline-block;
-    margin: 0; /* Removed margin for buttons -needed???? */
+    margin: 0; /* Removed margin for buttons */
     transition: background-color 0.3s, transform 0.3s;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif; /* Font for buttons */
 }
 
 .header-button:hover {
-    background-color: #1ba7af; 
-    /* transform: scale(1.05); */
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .content {
     text-align: center;
     padding: 2rem;
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Include padding in the element's total width */
+    flex: 1; /* Ensure it grows to fill available space */
 }
 
-
-/* Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
     .header {
         padding: 0.5rem;
-        height: calc(4vh + 20px); /* height for smaller screens */
+        height: calc(4vh + 20px); /* Adjust height for smaller screens */
     }
 
     .header-logo {
-        height: 30px; /* height for smaller screens */
+        height: 30px; /* Adjusted height for smaller screens */
     }
 
     .header-button {
-        font-size: 0.45rem; /* font size for smaller screens */
-        padding: 0.35rem 0.7rem; /* Increased padding for smaller screens???? */
+        font-size: 0.45rem; /* Smaller font size for smaller screens */
+        padding: 0.35rem 0.7rem; /* Increased padding for smaller screens */
     }
 
     .header-buttons {
         gap: 0.4rem; /* Increased space between buttons for smaller screens */
     }
 
-   
+    .content h2 {
+        font-size: 1.25rem;
+    }
 
+    .content p {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
     .header-logo {
-        height: 20px; /* more adjust height for very small screens */
+        height: 20px; /* Further adjust height for very small screens */
     }
 
     .header-button {
-        font-size: 0.4rem; /* more reduced font size */
-        padding: 0.3rem 0.6rem; /* more increased padding */
+        font-size: 0.4rem; /* Further reduced font size */
+        padding: 0.3rem 0.6rem; /* Further increased padding */
     }
 
     .header-buttons {
-        gap: 0.3rem; /* more space between buttons for very small screens */
+        gap: 0.3rem; /* Increased space between buttons for very small screens */
+    }
+
+    .content h2 {
+        font-size: 1rem;
+    }
+
+    .content p {
+        font-size: 0.875rem;
     }
 }
