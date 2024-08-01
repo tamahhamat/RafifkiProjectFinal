@@ -18,7 +18,7 @@ app.use(cors({
 
 app.use(express.json());
 
-const staticPath = path.join(__dirname, '..', '..', 'Frontend', 'public');
+const staticPath = path.join(__dirname, '..', 'Frontend', 'public');
 console.log('Serving static files from:', staticPath);
 app.use(express.static(staticPath));
 
