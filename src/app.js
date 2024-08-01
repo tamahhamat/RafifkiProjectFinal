@@ -11,10 +11,10 @@ const port = process.env.PORT || 3000;
 
 const routes = require('./routes/routes');
 
-app.use(cors({
-    origin: 'http://127.0.0.1:5500',
-    methods: ['GET'],
-}));
+// app.use(cors({
+//     origin: 'http://127.0.0.1:5500',
+//     methods: ['GET'],
+// }));
 
 
 app.use(cors({
