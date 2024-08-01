@@ -14,7 +14,7 @@ router.get('/test', (req, res) => {
 
 
 // Route to serve home.html
-router.get('/info', (req, res) => {
+router.get('/', (req, res) => {
   console.log(__dirname);
     res.sendFile(path.join(__dirname,  '../../FrontEnd/index.html'));
 });
