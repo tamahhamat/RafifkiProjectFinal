@@ -18,14 +18,14 @@ app.use(cors({
 
 app.use(express.json());
 
-const staticPath = path.join(__dirname, './Frontend/public');
+const staticPath = path.join(__dirname, '/Frontend/public');
 console.log('Serving static files from:', staticPath);
 app.use(express.static(staticPath));
 
 app.use('/', routes);
 
 // Catch-all handler to serve index.html for any other routes
-app.get('*', (req, res) => {
+app.get( (req, res) => {
     const indexPath = path.join(__dirname, ' ./Frontend/index.html');
     console.log('Serving index.html from:', indexPath);
     res.sendFile(indexPath, (err) => {
